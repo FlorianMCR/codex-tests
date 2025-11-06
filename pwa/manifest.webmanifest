@@ -1,0 +1,29 @@
+diff --git a/pwa/manifest.webmanifest b/pwa/manifest.webmanifest
+new file mode 100644
+index 0000000000000000000000000000000000000000..c56d8c3862913a6b8108238b1fb49d9e59f2a74c
+--- /dev/null
++++ b/pwa/manifest.webmanifest
+@@ -0,0 +1,23 @@
++{
++  "name": "Matrice d'Eisenhower",
++  "short_name": "Eisenhower",
++  "description": "Gestionnaire de tâches selon la matrice d'Eisenhower",
++  "start_url": "./index.html",
++  "display": "standalone",
++  "scope": "./",
++  "lang": "fr",
++  "theme_color": "#3a7bd5",
++  "background_color": "#f4f6fb",
++  "icons": [
++    {
++      "src": "../assets/icons/icon-192.png",
++      "sizes": "192x192",
++      "type": "image/png"
++    },
++    {
++      "src": "../assets/icons/icon-512.png",
++      "sizes": "512x512",
++      "type": "image/png"
++    }
++  ]
++}
