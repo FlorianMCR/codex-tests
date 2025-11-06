@@ -1,9 +1,3 @@
-diff --git a/i18n/es.json b/i18n/es.json
-new file mode 100644
-index 0000000000000000000000000000000000000000..0b3ea0d13bd40c2bb4710b90daf49ae6c279b4b8
---- /dev/null
-+++ b/i18n/es.json
-@@ -0,0 +1,72 @@
 +{
 +  "app": {
 +    "title": "Matriz de Eisenhower",
