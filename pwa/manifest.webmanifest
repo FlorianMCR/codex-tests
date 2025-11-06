@@ -1,9 +1,3 @@
-diff --git a/pwa/manifest.webmanifest b/pwa/manifest.webmanifest
-new file mode 100644
-index 0000000000000000000000000000000000000000..c56d8c3862913a6b8108238b1fb49d9e59f2a74c
---- /dev/null
-+++ b/pwa/manifest.webmanifest
-@@ -0,0 +1,23 @@
 +{
 +  "name": "Matrice d'Eisenhower",
 +  "short_name": "Eisenhower",
