@@ -1,0 +1,78 @@
+diff --git a/i18n/es.json b/i18n/es.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..0b3ea0d13bd40c2bb4710b90daf49ae6c279b4b8
+--- /dev/null
++++ b/i18n/es.json
+@@ -0,0 +1,72 @@
++{
++  "app": {
++    "title": "Matriz de Eisenhower",
++    "subtitle": "Organiza tus prioridades de forma eficaz"
++  },
++  "controls": {
++    "searchLabel": "Búsqueda",
++    "searchPlaceholder": "Filtrar tareas...",
++    "sortLabel": "Ordenar",
++    "sort": {
++      "none": "Sin orden",
++      "dueAsc": "Vencimiento más cercano",
++      "dueDesc": "Vencimiento más lejano",
++      "status": "Estado"
++    },
++    "language": "Idioma",
++    "theme": "Tema",
++    "themeLight": "Claro",
++    "themeDark": "Oscuro",
++    "export": "Exportar",
++    "import": "Importar",
++    "reset": "Reiniciar",
++    "resetConfirm": "¿Seguro que quieres borrar todo?",
++    "add": "+",
++    "addLabel": "Agregar tarea"
++  },
++  "quadrants": {
++    "q1": "Importante y urgente",
++    "q2": "Importante no urgente",
++    "q3": "Urgente no importante",
++    "q4": "No importante no urgente",
++    "copy": "Copiar",
++    "count": "{done}/{total}"
++  },
++  "dialog": {
++    "title": "Nueva tarea",
++    "titleCreate": "Nueva tarea",
++    "titleEdit": "Editar tarea",
++    "titleLabel": "Título",
++    "descLabel": "Descripción",
++    "dueLabel": "Fecha límite",
++    "quadrantLabel": "Cuadrante",
++    "doneLabel": "Completada",
++    "cancel": "Cancelar",
++    "save": "Guardar"
++  },
++  "tasks": {
++    "doneToggle": "Cambiar estado",
++    "noDue": "",
++    "edit": "Editar",
++    "delete": "Eliminar",
++    "statusDone": "X",
++    "statusTodo": " ",
++    "confirmDelete": "¿Eliminar esta tarea?"
++  },
++  "announcements": {
++    "created": "Tarea « {title} » creada",
++    "updated": "Tarea « {title} » actualizada",
++    "deleted": "Tarea eliminada",
++    "moved": "Tarea « {title} » movida a {quadrant}",
++    "copied": "Lista copiada para {quadrant}",
++    "imported": "Importación completada",
++    "importError": "Error al importar",
++    "reset": "Todas las tareas han sido borradas",
++    "dbError": "Almacenamiento no disponible"
++  },
++  "errors": {
++    "titleRequired": "El título es obligatorio",
++    "titleLength": "El título debe tener como máximo 140 caracteres",
++    "duplicate": "Ya existe una tarea con el mismo título y fecha en este cuadrante"
++  }
++}
