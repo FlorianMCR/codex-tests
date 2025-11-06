@@ -1,9 +1,3 @@
-diff --git a/pwa/service-worker.js b/pwa/service-worker.js
-new file mode 100644
-index 0000000000000000000000000000000000000000..0053e29bb16c1750d836388f7d818e4b931b5dc5
---- /dev/null
-+++ b/pwa/service-worker.js
-@@ -0,0 +1,53 @@
 +const CACHE_NAME = 'eisenhower-cache-v1';
 +const STATIC_ASSETS = [
 +  './',
