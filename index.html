@@ -1,0 +1,146 @@
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..45c51f71aa3e861db596577ac4ca6698f2f04e0d
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,140 @@
++<!DOCTYPE html>
++<html lang="fr" data-theme="auto">
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Matrice d'Eisenhower</title>
++  <link rel="manifest" href="pwa/manifest.webmanifest">
++  <link rel="stylesheet" href="styles.css">
++  <meta name="theme-color" content="#3a7bd5">
++</head>
++<body>
++  <header class="app-header">
++    <div class="branding">
++      <h1 data-i18n="app.title">Matrice d'Eisenhower</h1>
++      <p data-i18n="app.subtitle">Organisez vos priorités efficacement</p>
++    </div>
++    <div class="controls">
++      <div class="control-group">
++        <label for="search" data-i18n="controls.searchLabel">Recherche</label>
++        <input type="search" id="search" name="search" placeholder="" data-i18n-placeholder="controls.searchPlaceholder">
++      </div>
++      <div class="control-group">
++        <label for="sort" data-i18n="controls.sortLabel">Trier</label>
++        <select id="sort" name="sort">
++          <option value="none" data-i18n="controls.sort.none">Aucun tri</option>
++          <option value="due-asc" data-i18n="controls.sort.dueAsc">Échéance la plus proche</option>
++          <option value="due-desc" data-i18n="controls.sort.dueDesc">Échéance la plus lointaine</option>
++          <option value="status" data-i18n="controls.sort.status">Statut</option>
++        </select>
++      </div>
++      <div class="control-group">
++        <label for="language-select" data-i18n="controls.language">Langue</label>
++        <select id="language-select" name="language">
++          <option value="fr">FR</option>
++          <option value="es">ES</option>
++        </select>
++      </div>
++      <div class="control-group toggle-group">
++        <label for="theme-toggle" data-i18n="controls.theme">Thème</label>
++        <button id="theme-toggle" type="button" aria-pressed="false" data-i18n="controls.themeLight">Clair</button>
++      </div>
++      <div class="control-group actions-group">
++        <button id="export-btn" type="button" data-i18n="controls.export">Exporter</button>
++        <label class="import-label">
++          <span data-i18n="controls.import">Importer</span>
++          <input type="file" id="import-input" accept="application/json">
++        </label>
++        <button id="reset-btn" type="button" data-i18n="controls.reset">Réinitialiser</button>
++      </div>
++    </div>
++  </header>
++
++  <main>
++    <section class="quadrants" aria-label="Matrice d'Eisenhower">
++      <div class="quadrant" data-quadrant="q1">
++        <header class="quadrant-header">
++          <h2 data-i18n="quadrants.q1">Important &amp; Urgent</h2>
++          <div class="quadrant-meta">
++            <span class="quadrant-count" aria-live="polite"></span>
++            <button type="button" class="copy-btn" data-i18n="quadrants.copy">Copier</button>
++          </div>
++        </header>
++        <ul class="task-list" role="list" aria-label="Important et urgent" data-quadrant-list="q1"></ul>
++      </div>
++      <div class="quadrant" data-quadrant="q2">
++        <header class="quadrant-header">
++          <h2 data-i18n="quadrants.q2">Important non urgent</h2>
++          <div class="quadrant-meta">
++            <span class="quadrant-count" aria-live="polite"></span>
++            <button type="button" class="copy-btn" data-i18n="quadrants.copy">Copier</button>
++          </div>
++        </header>
++        <ul class="task-list" role="list" aria-label="Important non urgent" data-quadrant-list="q2"></ul>
++      </div>
++      <div class="quadrant" data-quadrant="q3">
++        <header class="quadrant-header">
++          <h2 data-i18n="quadrants.q3">Urgent non important</h2>
++          <div class="quadrant-meta">
++            <span class="quadrant-count" aria-live="polite"></span>
++            <button type="button" class="copy-btn" data-i18n="quadrants.copy">Copier</button>
++          </div>
++        </header>
++        <ul class="task-list" role="list" aria-label="Urgent non important" data-quadrant-list="q3"></ul>
++      </div>
++      <div class="quadrant" data-quadrant="q4">
++        <header class="quadrant-header">
++          <h2 data-i18n="quadrants.q4">Non important non urgent</h2>
++          <div class="quadrant-meta">
++            <span class="quadrant-count" aria-live="polite"></span>
++            <button type="button" class="copy-btn" data-i18n="quadrants.copy">Copier</button>
++          </div>
++        </header>
++        <ul class="task-list" role="list" aria-label="Non important non urgent" data-quadrant-list="q4"></ul>
++      </div>
++    </section>
++  </main>
++
++  <button id="add-task-btn" class="floating-btn" type="button" aria-haspopup="dialog" data-i18n="controls.add" data-i18n-aria-label="controls.addLabel" aria-label="Ajouter une tâche">+</button>
++
++  <dialog id="task-dialog" aria-modal="true">
++    <form method="dialog" id="task-form">
++      <h2 data-i18n="dialog.title">Nouvelle tâche</h2>
++      <div class="form-field">
++        <label for="task-title" data-i18n="dialog.titleLabel">Titre</label>
++        <input type="text" id="task-title" name="title" maxlength="140" required>
++      </div>
++      <div class="form-field">
++        <label for="task-desc" data-i18n="dialog.descLabel">Description</label>
++        <textarea id="task-desc" name="description" rows="3"></textarea>
++      </div>
++      <div class="form-field">
++        <label for="task-due" data-i18n="dialog.dueLabel">Date limite</label>
++        <input type="date" id="task-due" name="due">
++      </div>
++      <div class="form-field">
++        <label for="task-quadrant" data-i18n="dialog.quadrantLabel">Cadran</label>
++        <select id="task-quadrant" name="quadrant">
++          <option value="q1" data-i18n="quadrants.q1">Important &amp; Urgent</option>
++          <option value="q2" data-i18n="quadrants.q2">Important non urgent</option>
++          <option value="q3" data-i18n="quadrants.q3">Urgent non important</option>
++          <option value="q4" data-i18n="quadrants.q4">Non important non urgent</option>
++        </select>
++      </div>
++      <div class="form-field checkbox-field">
++        <input type="checkbox" id="task-done" name="done">
++        <label for="task-done" data-i18n="dialog.doneLabel">Terminée</label>
++      </div>
++      <menu class="dialog-actions">
++        <button value="cancel" type="reset" data-i18n="dialog.cancel">Annuler</button>
++        <button value="default" type="submit" data-i18n="dialog.save">Enregistrer</button>
++      </menu>
++      <p class="form-error" role="alert" aria-live="assertive"></p>
++    </form>
++  </dialog>
++
++  <div class="sr-only" aria-live="assertive" id="announcement"></div>
++
++  <script src="app.js" defer></script>
++</body>
++</html>
