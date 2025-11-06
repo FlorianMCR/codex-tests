@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrice d'Eisenhower</title>
+  <style>
+    body { 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+      font-family: sans-serif; 
+      background: #f7f7f7; 
+      color: #333; 
+    }
+    h1 { font-size: 2em; }
+  </style>
+</head>
+<body>
+  <h1>🚀 Site en ligne – Matrice d’Eisenhower</h1>
+</body>
+</html>
