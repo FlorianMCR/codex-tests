@@ -1,72 +1,57 @@
-+{
-+  "app": {
-+    "title": "Matrice d'Eisenhower",
-+    "subtitle": "Organisez vos priorités efficacement"
-+  },
-+  "controls": {
-+    "searchLabel": "Recherche",
-+    "searchPlaceholder": "Filtrer les tâches...",
-+    "sortLabel": "Trier",
-+    "sort": {
-+      "none": "Aucun tri",
-+      "dueAsc": "Échéance la plus proche",
-+      "dueDesc": "Échéance la plus lointaine",
-+      "status": "Statut"
-+    },
-+    "language": "Langue",
-+    "theme": "Thème",
-+    "themeLight": "Clair",
-+    "themeDark": "Sombre",
-+    "export": "Exporter",
-+    "import": "Importer",
-+    "reset": "Réinitialiser",
-+    "resetConfirm": "Voulez-vous vraiment tout effacer ?",
-+    "add": "+",
-+    "addLabel": "Ajouter une tâche"
-+  },
-+  "quadrants": {
-+    "q1": "Important & Urgent",
-+    "q2": "Important non urgent",
-+    "q3": "Urgent non important",
-+    "q4": "Non important non urgent",
-+    "copy": "Copier",
-+    "count": "{done}/{total}"
-+  },
-+  "dialog": {
-+    "title": "Nouvelle tâche",
-+    "titleCreate": "Nouvelle tâche",
-+    "titleEdit": "Modifier la tâche",
-+    "titleLabel": "Titre",
-+    "descLabel": "Description",
-+    "dueLabel": "Date limite",
-+    "quadrantLabel": "Cadran",
-+    "doneLabel": "Terminée",
-+    "cancel": "Annuler",
-+    "save": "Enregistrer"
-+  },
-+  "tasks": {
-+    "doneToggle": "Basculer le statut",
-+    "noDue": "",
-+    "edit": "Modifier",
-+    "delete": "Supprimer",
-+    "statusDone": "X",
-+    "statusTodo": " ",
-+    "confirmDelete": "Supprimer cette tâche ?"
-+  },
-+  "announcements": {
-+    "created": "Tâche « {title} » créée",
-+    "updated": "Tâche « {title} » mise à jour",
-+    "deleted": "Tâche supprimée",
-+    "moved": "Tâche « {title} » déplacée vers {quadrant}",
-+    "copied": "Liste copiée pour {quadrant}",
-+    "imported": "Import terminé",
-+    "importError": "Échec de l'import",
-+    "reset": "Toutes les tâches sont supprimées",
-+    "dbError": "Stockage indisponible"
-+  },
-+  "errors": {
-+    "titleRequired": "Le titre est requis",
-+    "titleLength": "Le titre doit contenir au plus 140 caractères",
-+    "duplicate": "Une tâche avec le même titre et la même date existe déjà dans ce cadran"
-+  }
-+}
+{
+  "app": {
+    "title": "Matrice d'Eisenhower",
+    "subtitle": "Organisez vos priorités efficacement"
+  },
+  "controls": {
+    "searchLabel": "Rechercher",
+    "searchPlaceholder": "Filtrer les tâches...",
+    "sortLabel": "Trier par",
+    "sort": {
+      "recent": "Ajout récent",
+      "oldest": "Ajout le plus ancien",
+      "title": "Titre A-Z"
+    },
+    "status": "Statut"
+  },
+  "language": "Langue",
+  "theme": "Thème",
+  "themeLight": "Clair",
+  "themeDark": "Sombre",
+  "export": "Exporter",
+  "import": "Importer",
+  "confirmReset": "Voulez-vous vraiment tout effacer ?",
+  "addTask": "Ajouter une tâche",
+  "quadrants": {
+    "q1": "Important & Urgent",
+    "q2": "Important non urgent",
+    "q3": "Non important mais urgent",
+    "q4": "Non important non urgent"
+  },
+  "copy": "Copier",
+  "confirmDeleteAll": "Tout effacer",
+  "task": {
+    "newTask": "Nouvelle tâche",
+    "titleLabel": "Titre de la tâche",
+    "titlePlaceholder": "Titre...",
+    "descLabel": "Description",
+    "descPlaceholder": "Notes internes",
+    "deadlineLabel": "Échéance",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "confirmDelete": "Supprimer cette tâche ?",
+    "move": "Déplacer",
+    "moveTo": "Déplacer vers",
+    "update": "Mettre à jour",
+    "copyTask": "Copier cette tâche",
+    "exported": "Tâche exportée",
+    "allDeleted": "Toutes les tâches ont été supprimées",
+    "imported": "Tâches importées"
+  },
+  "errors": {
+    "required": "Le titre est requis",
+    "maxLength": "Le titre doit contenir au plus 100 caractères",
+    "duplicate": "Une tâche avec ce titre existe déjà dans ce cadre"
+  }
+}
