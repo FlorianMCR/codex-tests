@@ -1,9 +1,3 @@
-diff --git a/app.js b/app.js
-new file mode 100644
-index 0000000000000000000000000000000000000000..2eb33cb9ada4179e0bed4d4b36c2f1f55ae6404c
---- /dev/null
-+++ b/app.js
-@@ -0,0 +1,710 @@
 +(function () {
 +  const QUADRANTS = [
 +    { id: 'q1', key: 'quadrants.q1', arrows: { ArrowRight: 'q2', ArrowDown: 'q3' } },
